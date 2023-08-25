@@ -15,7 +15,8 @@
   ],
   "require": {
     "pantheon-upstreams/upstream-config": "*",
-    "wpackagist-plugin/contact-form-7": "^5.8"
+    "wpackagist-plugin/contact-form-7": "^5.8",
+    "wpackagist-plugin/yoast-comment-hacks": "^1.9"
   },
   "config": {
     "vendor-dir": "vendor",
