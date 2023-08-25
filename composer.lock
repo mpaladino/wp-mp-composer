@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e745781c158e2292e82e3e35dde09aa1",
+    "content-hash": "164129da1c9a805d1b7444363a0da7a2",
     "packages": [
         {
             "name": "composer/installers",
@@ -725,6 +725,24 @@
                 "wiki": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki"
             },
             "time": "2018-12-18T09:43:51+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "5.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/5.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.8.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
         },
         {
             "name": "wpackagist-plugin/lh-hsts",
