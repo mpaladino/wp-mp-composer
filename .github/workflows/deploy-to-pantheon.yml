@@ -3,6 +3,7 @@ on: push
 
 jobs:
   build:
+    if: ${GITHUB_REF##*/} != 'main'
     runs-on: ubuntu-latest
 
     steps:
