@@ -13,15 +13,21 @@ jobs:
         config: ${{ secrets.SSH_CONFIG }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
+    #- name: Setup PHP
+    #  uses: shivammathur/setup-php@v2
+    #  with:
+    #    php-version: '7.4'
 
-    - name: Install Terminus
-      uses: pantheon-systems/terminus-github-actions@main
-      with:
-          pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+    #- name: Install Terminus
+    #  uses: pantheon-systems/terminus-github-actions@main
+    #  with:
+    #     pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+
+    #- name: Behat tests
+    #  uses: php-actions/behat@v1
+    #  with:
+    #    config: path/to/behat.yml
+    #    memory_limit: 256M
 
     - name: Deploy to Pantheon
       env:
@@ -31,7 +37,7 @@ jobs:
         git remote add pantheon $pantheon_repo
         git push --force pantheon HEAD:refs/heads/$BASE_BRANCH
 
-    - name: Launch Multidev
-      run: |
-        BASE_BRANCH=${GITHUB_REF##*/}
-        terminus multidev:create ${{ secrets.PANTHEON_SITE }}.live $BASE_BRANCH
+    #- name: Launch Multidev
+    #  run: |
+    #    BASE_BRANCH=${GITHUB_REF##*/}
+    #    terminus multidev:create ${{ secrets.PANTHEON_SITE }}.dev $BASE_BRANCH
