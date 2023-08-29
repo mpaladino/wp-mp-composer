@@ -116,3 +116,7 @@ Thumbs.db
 # LANDO #
 #########
 .lando.yml
+
+# PHP Storm #
+#########
+.idea
